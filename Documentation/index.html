@@ -1,0 +1,1093 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Purity HTML/CSS Template Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Purity&rdquo; Documentation by &ldquo;Tauris&rdquo; v1.1</h3>
+		
+		<hr>
+		
+		<h1 class="center">Purity HTML/CSS Template</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 7/07/2011<br>
+					By: Tauris<br>
+					Email: <a href="mailto:youremail@yourdomain.com">prafgon@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/Tauris">here</a>. If you like the theme, please take a moment to rate it on the ThemeForest website <a href="http://blog.themeforest.com/item/purity-clean-minimal-bold-website-template/408822">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol>
+			<li><a href="#htmlStructure">HTML Structure</a>
+                <ol class="sub">
+                    <li><a href="#header">1.1. Customizing #header</a>
+                    	<ol class="sub">
+                            <li><a href="#header_logo">1.1.1. Logo</a></li>
+                            <li><a href="#header_nav">1.1.2. Navigation</a></li>                            
+                        </ol>
+                    </li>
+                    <li><a href="#main">1.2. The #main content layouts</a>
+                        <ol class="sub">
+                            <li><a href="#fullwidth">1.2.1. Full width layout</a></li>
+                            <li><a href="#sidebar_right">1.2.2. Right sidebar layout</a></li>
+                            <li><a href="#sidebar_left">1.2.3. Left sidebar layout</a></li>
+                            <li><a href="#subpage">1.2.4. Subpage</a></li>
+                        </ol>
+                    </li>
+                    <li><a href="#footer">1.3. Customizing #footer</a>
+                        <ol class="sub">
+                            <li><a href="#flickr">1.3.1. Flickr</a></li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+			<li><a href="#cssFiles">CSS Files, Structure and Appearance</a>
+           		<ol class="sub">
+                    <li><a href="#css_general">2.1. General information</a></li>
+                	<li><a href="#additional_styles">2.2. Using additional color stylesheets</a></li>
+                    <li><a href="#heading_font">2.3. Changing the heading font</a></li>
+            	</ol>
+            </li>			
+			<li><a href="#building">Building the content area</a>
+            	<ol class="sub">
+                	<li><a href="#homepage">3.1. Homepage</a>
+                    	<ol class="sub">                        	
+                            <li><a href="#slider">3.1.1. Slider</a></li>  
+                            <li><a href="#homepage_tagline">3.1.2. Homepage tagline</a></li>                          
+                            <li><a href="#recent_work">3.1.3. 'Recent work' section</a></li>
+                            <li><a href="#icon_boxes">3.1.4. Icon boxes</a></li>
+                            <li><a href="#recent_posts">3.1.5. 'Recent posts' section</a></li>
+                        </ol>
+                    </li>
+                	<li><a href="#template_about">3.2. About</a></li>
+                	<li><a href="#template_blog">3.3. Blog index</a></li>
+                	<li><a href="#template_post">3.4. Blog single post</a></li>
+                    <li><a href="#template_portfolio_detailed">3.5. Portfolio - detailed + Lightbox (prettyPhoto) explanation</a></li>
+                    <li><a href="#template_portfolio">3.6. Portfolio - columns</a></li>
+                    <li><a href="#template_contact">3.7. Contact</a></li>
+                </ol>
+            </li>                                     
+            <li><a href="#contact_page">Contact page configuration</a></li>
+            <li><a href="#cufon">Installing Cufon (Firefox 2.0+ compatibility)</a></li> 
+            <li><a href="#simple_codes">Simple codes</a></li> 
+            <li><a href="#javascript">JavaScript</a></li>  
+            <li><a href="#psdFiles">PSD files</a></li>   
+			<li><a href="#credits">Sources and Credits</a></li>		
+		</ol>
+		<a href="simple_codes.html">Go to the Simple Codes documentation file →</a><br><br>
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>1. HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>This theme is a one column layout with three main sections: Header (#header), Main Content (#main) and Footer (#footer). All of the information within the main content area is nested within a div with a class of ".inner" that is held by a div with an id of "#main". The same thing goes to footer. The information within the footer area is nested with a class of ".inner" that is held by a div with an id of "#footer".
+        </p>
+        
+		<p>Few basic information:</p>
+         <ol>        	
+            <li>Put all your text content and images (except for centered ones) inside the paragraph tags: <pre>&lt;p> Your text here &lt;/p></pre>
+            If you want to make an another paragraph, don't use the double break tag (&lt;br>). Instead of that, close the previous paragraph and start a new one.
+            <pre>&lt;p> First paragraph here &lt;/p>
+&lt;p> Second paragraph here &lt;/p>
+            </pre>
+            </li>
+            <li>Don't place headings (h1, h2, h3, etc..) inside paragraphs. Place them outside:
+            <pre>&lt;h5>Your heading here&lt;/h5>
+&lt;p> Paragraph here &lt;/p>
+            </pre>
+            </li>
+            <li>To make an image adjust it's width to a column use this code:
+            <pre>&lt;img src="some_image.jpg" class="full-width" alt="An alternate text for an image"></pre>
+            </li>
+        </ol>
+		<hr>
+        
+        <h3 id="header"><strong>1.1. Customizing #header</strong> - <a href="#toc">top</a></h3>
+        
+        
+		<p>Header consists of 2 elements: Logo (.logo) and Navigation (.nav).</p>
+        
+        <h4 id="header_logo">1.1.1. Logo - <a href="#toc">top</a></h4>
+		<p>To change a logo simply find a div with a class of .logo:</p>
+		<pre>&lt;div class="logo">
+	&lt;a href="#">&lt;img src="img/logo.png" alt="Purity">&lt;/a>
+&lt;/div></pre>
+        <p>All you have to do here is to change the src path to your own image.<br>
+        NOTE! If your logo image height differs from the '.contact' div, you will want to center it vertically. To do that, simply open the main stylesheet file (style.css) and look for this line: 
+        <pre>#header .logo { float:left; padding:30px 0 0 0; }</pre>
+        The parameter you need to edit here is 'padding'. The .contact div is 90px height, so if your logo image height is, for example 40px, change the first padding value (30px) to 25px.
+        </p>
+        
+        <h4 id="header_nav">1.1.2. Navigation - <a href="#toc">top</a></h4>
+        <p>The navigation holder (ul - unordered list) is floated to the left side and is contained within the div .inner that is held by the div .nav (.nav > .inner > ul). Here is the general structure:</p>
+        <pre>&lt;ul> 
+	&lt;li class="current">&lt;a href="index.html">Home&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="about.html">About&lt;/a>
+		&lt;ul>
+			&lt;li>&lt;a href="sub1.html">Submenu 1&lt;/a>&lt;/li>
+			&lt;li>&lt;a href="sub2.html">Submenu 2&lt;/a>&lt;/li>
+			&lt;li>&lt;a href="sub3.html">Submenu 3&lt;/a>&lt;/li>
+		&lt;/ul>
+	&lt;/li> 
+	&lt;li>&lt;a href="blog.html">Blog&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="portfolio.html">Portfolio&lt;/a>&lt;/li> 
+	&lt;li>&lt;a href="contact.html">Contact&lt;/a>&lt;/li> 
+&lt;/ul></pre>
+        <p>Use class "current" on the current page menu item. On the above example menu item "Home" will be 'exposed'.</p>
+        
+		<hr>
+        
+        <h3 id="main"><strong>1.2. The #main content layouts</strong> - <a href="#toc">top</a></h3>
+        <p>There are three main layouts for the #main content area.</p>
+        <p><strong>NOTE:</strong> Place all the code listed under inside the div with a class of "inner" (#main > .inner), except for a subpage.<br>
+        If the page is going to include just a custom content (not a homepage, blog index, portfolio but a page like About us, Contact, Blog post), you need to add an additional class of "custom_content" to the "inner" div so it looks like this:</p>  
+        <pre>&lt;div class="inner custom_content"></pre>      
+        <h4 id="fullwidth">1.2.1. Full width layout - <a href="#toc">top</a></h4>
+        <p>This is a default layout. You don't have to add any additional tags to use it. Just remember to put all your content inside the div ".inner".</p>
+        
+        <h4 id="sidebar_right">1.2.2. Right sidebar layout - <a href="#toc">top</a></h4>
+        <p>Here is the structure of this layout:</p>
+        <pre>&lt;!-- Content Start -->
+&lt;div class="content">
+
+	&lt;-- Main content goes here -->
+    
+&lt;/div>&lt;!-- .content End -->  
+&lt;!-- Content End -->
+ 
+&lt;!-- Sidebar Start -->     
+&lt;div class="sidebar"> 
+
+	&lt;div class="sidebar_item">  
+		&lt;h6>Sidebar Item Title&lt;/h6>  
+		&lt;!-- Some Content -->        
+	&lt;/div> 
+    
+	&lt;div class="sidebar_item">   
+		&lt;h6>Sidebar Item Title&lt;/h6>   
+		&lt;!-- Another Content -->        
+	&lt;/div>  
+      
+&lt;/div>&lt;!-- .sidebar End -->  
+&lt;!-- Sidebar End -->
+
+&lt;div class="clear">&lt;/div>
+        </pre>
+        <p>So basically you put all your main content inside the div ".content". You can use all of the Simple Codes there (even columns), they will automatically adapt their width.
+        </p>
+        <p>The same thing goes for sidebar. Put all your sidebar content inside the div ".sidebar" using ".sidebar_item" div for each sidebar element. </p>
+        <ol>
+        	<li>To create a list inside the sidebar simply use the unordered list tag (&lt;ul>&lt;/ul>).</li>
+            <li>To create a 'Recent Posts' sidebar item I used on the Live Preview version, use this code:
+            <pre>&lt;div class="sidebar_item recent-posts">
+  &lt;h6>On the blog&lt;/h6>
+  &lt;ul>
+  
+    &lt;li>
+	&lt;a href="#">
+        &lt;img src="some_image.jpg" alt>
+        &lt;span>
+          &lt;strong>Post title&lt;/strong>
+          by Admin on Feb 3, 2011
+        &lt;/span>
+      &lt;/a>
+    &lt;/li>
+    
+    &lt;li>
+      &lt;a href="#">
+        &lt;img src="some_image.jpg" alt>
+        &lt;span>
+          &lt;strong>A bit longer title goes here&lt;/strong>
+          by Admin on Feb 3, 2011
+        &lt;/span>
+      &lt;/a>
+    &lt;/li>
+    
+  &lt;/ul>
+&lt;/div>
+            </pre>            
+            </li>
+        </ol>
+        
+        <h4 id="sidebar_left">1.2.3. Left sidebar layout - <a href="#toc">top</a></h4>
+        <p>Here is the structure of this layout:</p>
+        <pre>&lt;!-- Sidebar Start -->     
+&lt;div class="sidebar sidebar_left"> 
+
+	&lt;div class="sidebar_item">  
+		&lt;h6>Sidebar Item Title&lt;/h6>  
+		&lt;!-- Some Content -->        
+	&lt;/div> 
+    
+	&lt;div class="sidebar_item">   
+		&lt;h6>Sidebar Item Title&lt;/h6>   
+		&lt;!-- Another Content -->        
+	&lt;/div>  
+      
+&lt;/div>&lt;!-- .sidebar End -->  
+&lt;!-- Sidebar End -->
+        
+&lt;!-- Content Start -->
+&lt;div class="content content_right">
+
+	&lt;-- Main content goes here -->
+    
+&lt;/div>&lt;!-- .content End -->  
+&lt;!-- Content End -->
+
+&lt;div class="clear">&lt;/div>
+        </pre>
+        <p>As you can see, a thing that changes is the order of the main divs: .content and .sidebar. Sidebar is going to be on the right side here so it has to be put before the div .content. Notice that these main divs have got additional classes: .sidebar_left for the Sidebar and .content_right for the Content.</p>
+        
+        
+        <h4 id="subpage">1.2.4. Subpage - <a href="#toc">top</a></h4>
+        <p>This is a basic structure of a subpage:</p>
+        <pre>&lt;!-- MAIN CONTENT START -->         
+&lt;div id="main"> 
+
+    &lt;div class="tagline"> 
+        &lt;h1>Subpage title&lt;/h1> 
+        &lt;span>Subpage description.&lt;/span>
+        &lt;div class="clear">&lt;/div>
+    &lt;/div>
+    
+    &lt;div class="inner custom_content">
+
+	&lt;!-- Content goes here -->
+
+    &lt;/div class="inner">    
+&lt;/div id="main"></pre>
+		<p>If you don't want the description to be shown on your website, simply remove the &lt;span>&lt;/span> part.
+        
+        <hr>
+        
+        
+        <h3 id="footer"><strong>3. Customizing #footer</strong> - <a href="#toc">top</a></h3>        
+        <p>The footer content area is basically a full width div built with 4 columns.</p>
+        
+        <p>The 'social' column uses additional div inside with a class ".social". Don't forget to use it if you move it somewhere else. Also, to remove a social icon simply delete the &lt;a href="some_site.com">&lt;img src="img/social/twitter.png" alt>&lt;/a> from your footer. You can add additional social links of course, the template comes up with 11 most popular social sites icons that can be found in /img/social/ folder.</p>
+        <p>Need more social icons? <a href="http://www.wpzoom.com/wpzoom/500-free-icons-wpzoom-social-networking-icon-set/">Get them here</a>.</p>
+       
+        
+        <h4 id="flickr">1.3.1. Flickr - <a href="#toc">top</a></h4>
+        <p>Here is the javascript code from the footer:</p>
+        <pre>&lt;script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?<span class="highlight">count=8</span>&display=latest&size=s&layout=x&source=all_tag&tag=black+and+white">&lt;/script></pre>
+        <p>To customize the badge to show your own images from your Flickr account, go <a href="http://www.flickr.com/badge.gne">Here</a> and follow these steps:</p>
+        <ol>
+        	<li>Step 1: Pick the "HTML badge".</li>
+            <li>Step 2: Choose content that you want to be displayed.</li>
+            <li>Step 3: Pick how many items would you like to show (you can change to a specific value later, as I highlighted it above). Select 'square', orientation 'none'.</li>
+            <li>Step 4: Select 'No border' and 'No background'.</li>
+            <li>Step 5: From a field 'This is the code you need' the only part you will want is the javascript. It will look similar to the code above.</li>
+        </ol>
+        
+        <hr>
+        
+        <h3 id="cssFiles"><strong>2. CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>I'm using several CSS files in this theme. The first one, "style.css", is a main template stylesheet. It will make it much easier for you to edit the layout later. The second stylesheet is "custom.css" which is a place for your custom css styling.
+        They are both located in the /css/ folder. <br> There are also two stylesheets for scripts located in /css/scripts/: flexslider.css and prettyPhoto.css.  
+        </p>
+        <p>
+        <strong>NOTE:</strong> If you aren't familiar with CSS, please don't edit the "style.css" file since it may affect the whole layout. Instead of that, I suggest you to copy a selected style rule from "style.css" and put it inside the "custom.css" file. It will simply get overwritten.
+        </p>
+        
+        <h4 id="css_general">2.1. General information - <a href="#toc">top</a></h4>
+        <p>
+        Here are some general informations about Purity styling: (As mentioned above, use the "custom.css" file for a custom styling).
+        <ol>
+        	<li>To change the general font rules, use this code:
+            <pre>body {
+    font-size:12px;
+    color:#666;
+    font-family: Arial, Helvetica, sans-serif;
+}</pre>
+<p>You don't have to change all these settings of course. You may change only the font-size rule, without changing the color and font-family.</p>
+            </li>
+            
+            <li>To change the headings font rules, use this code:
+            <pre>h2 {
+    font-size:28px;
+    line-height:28px;
+    color:#666;
+    font-family:'LeagueGothicRegular', Helvetica, Arial;
+    font-style:italic;
+    margin-bottom:16px;
+}</pre>
+<p>You can also change rules for few elements at once by simply replacing, for example, 'h2' with 'h1, h2, h3, h4'. It will affect all those 4 headings.</p>
+            </li>
+            
+            <li>To change the homepage tagline font rules, use this code:
+            <pre>.home_tagline h1 {
+    font-size:32px;
+    line-height:40px;
+    color:#888;
+}</pre>
+            </li>
+            
+        </ol>
+        
+        </p>
+        
+        <h4 id="additional_styles">2.2. Using additional color stylesheets - <a href="#toc">top</a></h4>
+        <p>
+        The template comes also with 10 additional stylesheets:
+        <ol>
+        	<li>Nine color schemes that are located in /css/schemes/</li>
+            <li>Dark skin stylesheet (dark.css) located in /css/skins/</li>
+        </ol>
+        </p>       
+
+		<p>You can use these additional schemes in two ways:</p>  
+        <ol>
+        	<li>Attach the stylesheet to the &lthead>&lt/head> section of your website. For example, if you would like to use a layout with a dark skin and a red color scheme, add this code:  
+            <pre>
+&lt;link rel="stylesheet" href="css/skins/dark.css" type="text/css" media="screen">
+&lt;link rel="stylesheet" href="css/schemes/red.css" type="text/css" media="screen">
+            </pre>            
+            </li>            
+            <li>Second way is to copy the selected stylesheet content and paste it inside the custom.css file. For example, to get the same effect as above, copy the red.css content, paste it to the custom.css file and to the same thing for dark.css file. This way you can save some space in your &lthead>&lt/head> section.</li>
+        </ol>        
+        <p>To change a background image or color, add this code to your custom.css file:</p>
+		<pre>body {
+  background:#222 url(../img/backgrounds/image1.jpg) no-repeat top center fixed;
+}
+        </pre>
+        <p>Where '#222' is a default background color that appears before the background image is loaded. You may also not want to use any background image and have it as a plain color. To do that, simply remove the rules after the color part (#222), just like that:</p>
+		<pre>body {
+  background:#222;
+}
+        </pre>
+		<p>If you want to know more about CSS background rules, <a href="http://www.w3schools.com/css/css_background.asp">Visit this site</a>.</p>
+		
+        
+        <h4 id="heading_font">2.3. Changing the heading font - <a href="#toc">top</a></h4>
+        <p>
+        The heading font is the BOLD one and is implemented using the @font-face. It is named League Gothic and you can find it <a href="http://www.fontsquirrel.com/fonts/League-Gothic">Here</a>.
+        </p>
+        <p>
+        Here is a guide of how to change the Heading Font:
+        </p>
+        <ol>
+        	<li>Go to <a href="http://www.fontsquirrel.com/">Font Squirrel</a> and choose a font. On the font page, navigate to the @font-face tab and download the @font-face Kit to your hard disk.</li>
+            <li>Unrar the archive and open the stylesheet.css file. Copy the whole @font-face rule of the font weight that you want (bold, normal, italic, there will be plenty to choose from) and paste it (replace with the old one) to the Purity's main stylesheet (/css/style.css - 4.1.1. Heading Font section). As you are done with that, change the src paths in the rule. Since font files are stored in the /font/ folder, you need to add it at the beginning.<br><br> For example you should change this:
+            <pre>url('League_Gothic-webfont.eot');</pre>
+            <p>To this:
+            <pre>url('font/League_Gothic-webfont.eot');</pre>
+            </li>
+			<li>Just under the @font-face rule in the main Purity stylesheet (/css/style.css) there is a rule that defines the heading font-family. It looks like this:
+            <pre>.nav,h1,h2,h3,h4,.home_tagline h1,.tagline h1,.over span,.dropcap1,.dropcap2,.bold,.flex-caption { 
+	font-family:'LeagueGothicRegular', Helvetica, Arial; 
+	text-transform:uppercase; 
+	font-weight:normal; 	
+}</pre>
+			<p>All you need to do here is change the 'LeagueGothicRegular' name to the name of your font that is defined in the @font-face rule (font-family part).</p>
+            <p>As you may see, there are also two font attributes: text-transform (in this case it transforms all letters to the uppercase) and font-weight (normal weight here). Change them as you wish.</p>
+            </li>
+            
+            <li>Go to the folder you just downloaded again and copy the font files that are mentioned in your new @font-face rule and paste them to the /css/font/ folder of your page.
+            </li>
+        </ol>
+        <p><strong>NOTE:</strong> Since League Gothic is a pretty 'small' font I had to use pretty big font sizes to make it look good enough. To change the font size, look for the rules of the tags mentioned in the 'heading font definer' line (the one where you just set the font-family name).</p>
+        
+        <hr>
+        
+        
+        
+        <h3 id="building"><strong>3. Building the content area</strong> - <a href="#toc">top</a></h3>
+        
+        <p>Purity comes with a lot of facilities to help you build a content layout of your choice. The Purity .zip archive includes all the templates I used for the Preview version so you don't have to build them all from scratch.<br>
+		Templates included:
+        </p>
+        <ol>
+        	<li>Homepage with a slider (index.html)</li>
+            <li>Alternate homepage with a slider (index2.html)</li>
+            <li>Homepage with a static image (index3.html)</li>
+            <li>About page (about.html)</li>
+            <li>Blog templates:
+            	<ol class="sub">
+                	<li>5.1. Default blog with a right sidebar (blog_right.html)</li>
+                    <li>5.2. Alternate blog with a right sidebar (blog_right2.html)</li>
+                    <li>5.3. Alternate blog with a right sidebar (blog_right3.html)</li>
+                    <li>5.4. Alternate blog with a left sidebar (blog_left.html)</li>
+                    <li>5.5. Alternate blog with a left sidebar (blog_left2.html)</li>
+                    <li>5.6. Alternate blog with a left sidebar (blog_left2.html)</li>
+                    <li>5.7. Blog post page (post.html)</li>
+                </ol>
+            </li>
+            <li>Portfolio: one column - detailed (portfolio_one1.html) and standard (portfolio_one2.html)</li>
+            <li>Portfolio: two columns - just image (portfolio_two1.html), image+title (portfolio_two2.html), standard (portfolio_two3.html)</li>
+            <li>Portfolio: three columns - just image (portfolio_three1.html), image+title (portfolio_three2.html), standard (portfolio_three3.html) </li>
+            <li>Portfolio: four columns - just image (portfolio_four1.html), image+title (portfolio_four2.html), standard (portfolio_four3.html) </li>
+            <li>Contact page (contact.html)</li>
+        </ol>
+        <p>As you can see there are 23 templates for a good start.</p>
+        
+        <p>Here is some general information of how they are built and how to modify them:</p>
+        
+        <h4 id="homepage">3.1. Homepage template - <a href="#toc">top</a></h4>
+        <p>
+        All full width templates content area is nested directly within the div ".inner" and doesn't need to be contained in any additional elements.
+        </p>
+        
+        <h5 id="slider">3.1.1. The slider - <a href="#toc">top</a></h5>
+        <p>
+        The basic slider structure:
+
+		<pre>&lt;div id="slider" class="flexslider"> 
+	&lt;ul class="slides">                    		
+	    &lt;li>&lt;img src="img/pictures/5w.jpg" alt="" />&lt;/li>
+	    &lt;li>&lt;a href="portfolio_item.html">&lt;img src="img/pictures/2w.jpg" alt="" title="This is an example caption." />&lt;/a>&lt;/li>
+	    &lt;li>&lt;img src="img/pictures/8w.jpg" alt="" />&lt;/li>
+	    &lt;li>&lt;img src="img/pictures/6w.jpg" alt="" />&lt;/li>
+	&lt;/ul>
+&lt;/div>  
+				</pre>
+  		As you can see, the slider structure is very simple.
+        </p>
+        <ol>
+        	<li>To add a slide, use this code: <code>&lt;li>&lt;img src="slide_image_source.jpg" alt="Optional title" />&lt;/li></code></li>
+            <li>To add a slide with a caption, use this code: <code>&lt;li>&lt;img src="slide_image_source.jpg" alt="Optional title" title="Optional caption text" />&lt;li></code></li>
+        </ol>
+        <p>If you would like to change a transition effect, pause time and other slider settings, open "custom.js" file (located in /js/ folder) and find FlexSlider lines:</p>
+        <pre>jQuery('#slider').flexslider({
+	slideshowSpeed: 4000,
+	animationDuration: 700,			
+	directionNav: true,
+	controlNav: true,
+	animation: 'fade'
+});
+        </pre>
+        <p>The time unit here is a milisecond (1 second = 1000ms), so '4000' stands for 4000 miliseconds which is equal to 4 seconds. If you want to change more options of the FlexSlider, <a href="http://www.woothemes.com/products/wooslider/">Check this website</a>.</p>
+        
+        <h5 id="homepage_tagline">3.1.2. The homepage tagline - <a href="#toc">top</a></h5>
+        <p>Here is the structure:</p>
+        <pre>&lt;div class="home_tagline">
+	&lt;h1>Your tagline text goes here.&lt;br>Here is a &lt;a href="link.html">Link&lt;/a>&lt;/h1>
+&lt;/div></pre>
+        <p>You can put the tagline on any page you want.</p>
+        
+                
+        <h5 id="recent_work">3.1.3. Recent work - <a href="#toc">top</a></h5>        
+        
+        
+    	<p>This elements is also built with the Columns Simple Codes (Read more about columns <a href="simple_codes.html#columns">Here</a>). Here is the structure:</p>
+    	<pre>&lt;div id="recent-work">
+	&lt;h2 class="decorated">Recent work&lt;/h2>   
+                     
+	&lt;div class="one_fourth">
+                &lt;a href="portfolio_item.html" class="over">
+                    &lt;span>Work title&lt;/span>
+                    &lt;p>Work description.&lt;/p>
+                &lt;/a>
+		&lt;a href="link.html">&lt;img src="img/picture.jpg" alt>&lt;/a>
+	&lt;/div>           
+	&lt;div class="one_fourth">
+            	&lt;a href="portfolio_item.html" class="over">
+                    &lt;span>Work title&lt;/span>
+                    &lt;p>Work description.&lt;/p>
+                &lt;/a>
+		&lt;a href="link.html">&lt;img src="img/picture.jpg" alt>&lt;/a>
+	&lt;/div>
+	&lt;div class="one_fourth">
+            	&lt;a href="portfolio_item.html" class="over">
+                    &lt;span>Work title&lt;/span>
+                    &lt;p>Work description.&lt;/p>
+                &lt;/a>
+		&lt;a href="link.html">&lt;img src="img/picture.jpg" alt>&lt;/a>
+	&lt;/div>
+	&lt;div class="one_fourth last">
+            	&lt;a href="portfolio_item.html" class="over">
+                    &lt;span>Work title&lt;/span>
+                    &lt;p>Work description.&lt;/p>
+                &lt;/a>
+		&lt;a href="link.html">&lt;img src="img/picture.jpg" alt>&lt;/a>
+	&lt;/div>
+	&lt;div class="clear">&lt;/div>
+    
+	&lt;a href="#" class="goto">View Portfolio →&lt;/a>
+&lt;/div></pre>
+
+		<h5 id="icon_boxes">3.1.4. Icon boxes - <a href="#toc">top</a></h5> 
+        
+        <p>Icon box is a Simple Code element. Learn more about them <a href="simple_codes.html">Here</a>.</p>
+
+		<h5 id="recent_posts">3.1.5. Recent posts - <a href="#toc">top</a></h5>        
+        
+        
+    	<p>This elements is also built with the Columns Simple Codes (Read more about columns <a href="simple_codes.html#columns">Here</a>). Here is the structure:</p>
+    	<pre>&lt;div id="recent-posts" class="hover"> 
+  &lt;h2 class="decorated">From the Blog&lt;/h2>         
+  &lt;div class="one_fourth"> 
+      &lt;h6>&lt;a href="blog_post.html">Post title here&lt;/a>&lt;/h6> 
+      &lt;span class="post-info">by Admin on Feb 3, 2011&lt;/span>
+      &lt;p> 
+          Duis aute irure dolor cillum reprehenderit in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+      &lt;/p>
+  &lt;/div>           
+  &lt;div class="one_fourth"> 
+      &lt;h6>&lt;a href="blog_post.html">This is a test&lt;/a>&lt;/h6> 
+      &lt;span class="post-info">by Admin on Feb 3, 2011&lt;/span>
+      &lt;p> 
+          Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      &lt;/p>
+  &lt;/div> 
+  &lt;div class="one_fourth"> 
+      &lt;h6>&lt;a href="blog_post.html">Compatibility&lt;/a>&lt;/h6> 
+      &lt;span class="post-info">by Admin on Feb 3, 2011&lt;/span>
+      &lt;p> 
+          In duis aute irure dolor in reprehenderit in voluptate velit esse dolore eu fugiat nulla pariatur.
+      &lt;/p>
+  &lt;/div> 
+  &lt;div class="one_fourth last"> 
+      &lt;h6>&lt;a href="blog_post.html">That's my day&lt;/a>&lt;/h6> 
+      &lt;span class="post-info">by Admin on Feb 3, 2011&lt;/span>
+      &lt;p> 
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      &lt;/p>
+  &lt;/div> 
+  &lt;div class="clear">&lt;/div> 
+  
+  &lt;a href="blog.html" class="goto">Go to the Blog →&lt;/a>
+&lt;/div></pre>
+	<p>To remove the 'hover' effect that 'hides' all other posts, simply remove the class "hover" from the main div so it looks like this:</p>
+    <pre>&lt;div id="recent-posts"></pre>
+    	
+        
+        
+        <h4 id="template_about">3.2. About template</h4>
+        
+        
+        
+        <p>The about template is a layout with the sidebar and custom content. The content is built using the Simple Codes (read more about Simple Codes <a href="simple_codes.html">Here)</a>.</p>
+        <p><strong>NOTE:</strong> Since it's a custom content layout, it uses the additional "custom_content" class on it's #main .inner div. Please refer <a href="#main">Here</a> for more information</p>
+        
+        
+        <h4 id="template_blog">3.3. Blog index template</h4>
+        
+        
+        
+		<p>The blog index template is a layout with the sidebar. Here is the basic structure:</p>
+		<pre>&lt;div class="content">        
+  &lt;div class="post"> 
+      &lt;div class="post-image"> 
+          &lt;a href="blog_post.html">&lt;img src="img/pictures/1w.jpg" height="200" alt>&lt;/a> 
+      &lt;/div> 
+      &lt;div class="post-content">
+          &lt;div class="post-info">
+              &lt;span class="date">&lt;span class="bold">Feb 3&lt;/span> 2011&lt;/span>
+              &lt;span class="comments-nr">&lt;a href="#">&lt;span class="bold">2&lt;/span> comments&lt;/a>&lt;/span>
+              &lt;p>&lt;span>By&lt;/span> John&lt;/p>
+              &lt;p>&lt;span>In&lt;/span> Photography&lt;/p>
+              &lt;p>&lt;span>Tags&lt;/span> Illustrator, Light, Smooth, Clean, Pure&lt;/p>
+          &lt;/div>
+          &lt;div class="post-entry"> 
+              &lt;h1 class="title">&lt;a href="blog_post.html">Post title goes right here&lt;/a>&lt;/h1> 
+              &lt;p>Proin tincidunt, velit vel porta elementum, magna diam molestie sapien, non aliquet massa pede eu diam. Aliquam iaculis. Proin tincidunt, velit vel porta elementum, magna diam molestie sapien, non aliquet massa pede eu diam. Aliquam iaculis.&lt;/p> 
+              &lt;a href="blog_post.html">Read more →&lt;/a>
+          &lt;/div> 
+      &lt;/div>
+  &lt;/div>
+    
+  &lt;div class="post"> 
+      &lt;div class="post-image"> 
+          &lt;a href="blog_post.html">&lt;img src="img/pictures/1w.jpg" height="200" alt>&lt;/a> 
+      &lt;/div> 
+      &lt;div class="post-content">
+          &lt;div class="post-info">
+              &lt;span class="date">&lt;span class="bold">Feb 3&lt;/span> 2011&lt;/span>
+              &lt;span class="comments-nr">&lt;a href="#">&lt;span class="bold">2&lt;/span> comments&lt;/a>&lt;/span>
+              &lt;p>&lt;span>By&lt;/span> John&lt;/p>
+              &lt;p>&lt;span>In&lt;/span> Photography&lt;/p>
+              &lt;p>&lt;span>Tags&lt;/span> Illustrator, Light, Smooth, Clean, Pure&lt;/p>
+          &lt;/div>
+          &lt;div class="post-entry"> 
+              &lt;h1 class="title">&lt;a href="blog_post.html">Post title goes right here&lt;/a>&lt;/h1> 
+              &lt;p>Proin tincidunt, velit vel porta elementum, magna diam molestie sapien, non aliquet massa pede eu diam. Aliquam iaculis. Proin tincidunt, velit vel porta elementum, magna diam molestie sapien, non aliquet massa pede eu diam. Aliquam iaculis.&lt;/p> 
+              &lt;a href="blog_post.html">Read more →&lt;/a>
+          &lt;/div> 
+      &lt;/div>
+  &lt;/div>
+  
+  &lt;div class="pagination"> 
+      &lt;a href="#" class="newer-posts">Newer posts&lt;/a> 
+      &lt;a href="#" class="older-posts">Older posts&lt;/a> 
+  &lt;/div> 
+
+&lt;/div>&lt;!-- .content End -->
+&lt;!-- Content End -->
+
+&lt;!-- Sidebar Start -->
+&lt;div class="sidebar">
+	&lt;!-- Sidebar Content -->
+&lt;/div>&lt;!-- .sidebar End -->
+</pre>
+		<p>So basically, the post content is nested within a div of class ".post". The post image goes to the div ".post-image" while the Post Information goes to to the div ".post-info". Post Title and Post Content goes to the div ".post-entry".</p>
+        <p>To remove the Pagination element, simply remove the whole div .pagination from your code.</p>
+        
+        
+        <h4 id="template_post">3.4. Post template</h4>
+        
+        
+        
+        <p>The post template is a layout with the sidebar. The content is built using the Simple Codes (read more about Simple Codes <a href="simple_codes.html">Here)</a>. </p>
+        <p><strong>NOTE:</strong> Since it's a custom content layout, it uses the additional "custom_content" class on it's #main .inner div. Please refer <a href="#main">Here</a> for more information</p>
+        <p>Here is a basic structure:</p>
+        
+        <pre>&lt;div class="content">
+        
+	&lt;div class="gallery clearfix">
+		&lt;a href="some_image.jpg" rel="gallery[gallery1]" title="You can add caption to pictures.">&lt;img src="some_image.jpg" alt="Image title goes here" />&lt;/a> 
+ 
+		&lt;div class="hidden">
+			&lt;a href="some_image.jpg" rel="gallery[gallery1]">&lt;/a>
+			&lt;a href="some_image.jpg" rel="gallery[gallery1]">&lt;/a>
+		&lt;/div>
+	&lt;/div></pre>
+    <p>On the very top we've got a lightbox gallery (more about lightbox <a href="#template_portfolio_detailed">Here</a>). You can easily replace it with a static image using this code: &lt;img class="heading-img" src="your_image.jpg" alt>. It will automatically adjust it's width to the div .content. </p>
+    <pre>
+	&lt;h1>Post title goes here&lt;/h1>
+	&lt;span class="post-meta">Posted by &lt;strong>admin&lt;/strong> on &lt;strong>Feb 3, 2011&lt;/strong> in &lt;strong>Photography&lt;/strong>&lt;/span>
+
+	&lt;!-- Post Content -->    
+
+	&lt;div class="divider line">&lt;/div></pre>
+    <p>Here we've got the Post Title, 'Post info' area and the Post Content. All is ended by the divider line.</p>
+    <pre>
+	&lt;!-- Post Comments Start -->
+	&lt;div class="comments-wrap">
+		&lt;h3>(3) Comments&lt;/h3>
+
+		&lt;div class="comment">
+			&lt;div class="avatar-holder">
+				&lt;img src="img/avatar_unknown.png" alt>
+			&lt;/div>
+
+			&lt;div class="comment-entry">
+				&lt;span>&lt;strong>Admin&lt;/strong> on Feb 3, 2011&lt;/span>
+				&lt;p>Comment text content goes here.&lt;/p>
+			&lt;/div>
+		&lt;/div>
+	&lt;/div>
+    	&lt;!-- Post Comments End --></pre>
+    <p>Here we've got the Comments section. A single comment is held within a div .comment.</p>
+    <pre>
+	&lt;!-- Post Respond Start -->
+	&lt;div class="respond">
+		&lt;h3>Add a comment&lt;/h3>
+
+		&lt;form action="#" class="big_form" method="get"> 
+			&lt;span>Name:&lt;/span> 
+			&lt;input class="text" type="text" name="name"> 
+
+			&lt;span>E-Mail:&lt;/span> 
+			&lt;input class="text" type="text" name="email"> 
+ 
+			&lt;span>Message:&lt;/span>
+            		&lt;textarea name="msg" rows="8" cols="60">&lt;/textarea> 
+            
+			&lt;input type="submit" class="button light_grey" value="Add Comment"> 
+		&lt;/form> 
+	&lt;/div>
+	&lt;!-- Post Respond End -->
+
+&lt;/div>&lt;!-- .content End -->
+&lt;!-- Content End --></pre>
+        
+        <p>Up here we've got the Comment Respond element.</p>
+        
+        <h4 id="template_portfolio_detailed">3.5. Portfolio - detailed</h4>
+        <p>Here is the structure:</p>
+        <pre>&lt;ul class="filter"> 
+  &lt;li class="current">
+    &lt;a href="" title="Any title you want">All Projects&lt;/a>
+  &lt;/li> 
+  &lt;li>
+    &lt;a href="" title="Any title you want">Architecture&lt;/a> 
+  &lt;/li> 
+  &lt;li>
+    &lt;a href="" title="Any title you want">New Look&lt;/a> 
+  &lt;/li> 
+  &lt;li>
+    &lt;a href="" title="Any title you want">Photo View&lt;/a> 
+  &lt;/li> 
+&lt;/ul>
+
+&lt;!- Up here we've got a filter navigation. --->
+
+
+&lt;ul class="portfolio one-column detailed"> 	
+	
+  &lt;li data-id="id-1" class="new-look"> 
+    &lt;div class="item-image">
+      <span class="highlight">&lt;div class="gallery clearfix" >
+          &lt;a href="img/pictures/1.jpg" rel="gallery[<strong>gallery1</strong>]">&lt;img src="img/pictures/1w.jpg" alt="Image title goes here" />&lt;/a>                        
+        &lt;div class="hidden">
+          &lt;a href="img/pictures/2.jpg" rel="gallery[<strong>gallery1</strong>]">&lt;/a>
+          &lt;a href="img/pictures/3.jpg" rel="gallery[<strong>gallery1</strong>]">&lt;/a>
+        &lt;/div>        
+      &lt;/div></span>
+    &lt;/div>                       
+    
+    &lt;div class="item-name">
+      &lt;h3 class="title">&lt;a href="img/pictures/1.jpg" rel="gallery[gallery1]">Grand Central&lt;/a>&lt;/h3>
+      &lt;p>This image directly opens a lightbox gallery. Donec sed tellus eget sapien fringilla nonummy.&lt;/p>
+      &lt;p>Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. &lt;/p>
+      &lt;a href="portfolio_item.html">Read more →&lt;/a>
+    &lt;/div>
+  &lt;/li>
+  
+&lt;/ul></pre>		
+		<p>So one portfolio element is held by the &ltli>&lt;/li> element.</p>
+        <p><strong>About lightbox (prettyPhoto): </strong>In this example we've got a lightbox (prettyPhoto gallery, code highlighted with a purple color) opening as we click on the image - you may use a lightbox gallery wherever you want. As you can see, the first/front image is placed directly inside the div ".item-image" while the rest of the gallery is placed inside the div ".hidden". Notice that all anchor tags (&lt;a>&lt;/a>) have the same relation: rel="gallery[gallery1]". The part that you can change is inside the '[' ']' brackets. You can name it as you wish. Your relation may look like this: rel="gallery[photo]" or rel="gallery[mountains]". But remember to use the same relation to all anchor tags within the gallery!</p>
+        
+        <p>If you would like to open only one image with the lightbox, without using gallery. To do that, simply don't remove the div ".hidden".</p>
+        <p>You may also don't want to use the lightbox and instead of it use just a static image as a link to your portfolio item page. This is an example of how you can do it:</p>
+        <pre>&lt;div class="item-image">
+    &lt;a href="portfolio_item.html">&lt;img src="img/pictures/2w.jpg" alt>&lt;/a>
+&lt;/div></pre>
+
+		<p><strong>About filtering:</strong> As you can see, before the portfolio unordered list (&lt;ul>) there is a filtering navigation. How does the relation between the filter nav list item (li) and the portfolio list item work? It's about the filter nav list item name and portfolio list item class. For example: we've got a filter item named 'New Look'. Javascript makes it all small letters and replaces spaces with a dash so it looks like this: 'new-look'. So if you want a portfolio list-item to be placed into the 'New Look' group you need to give it a class of 'new-look', like this:</p>
+        <pre>&lt;li data-id="id-1" class="new-look">
+        
+	&lt;!-- Portfolio list-item content -->
+ 
+&lt;/li></pre>
+
+		<p>If you use the filtering, you need to add a data-id to your portfolio list-item elements, like on the example above. Remember to use different values for each list-item.</p>
+        <p>You may also don't want to use the filtering. To do that, simply remove the &ltul> with the filtering menu. You don't have to add any classes or data-ids to your portfolio list-items anymore.</p>
+        
+        <h4 id="template_portfolio">3.6. Portfolio - columns</h4>
+        <p><strong>NOTE:</strong> While using a portfolio with a layout of two and more columns, make sure that all images are the same size (width and height). If they don't, it will break the unordered list structure. You may also add a simple height attribute to the images:
+        <pre>&lt;img src="your_image.jpg" height="200" alt></pre>
+        <p>Here is a structure of a columned portfolio:</p>
+<pre>&lt;ul class="filter"> 
+  &lt;li class="current">  
+    &lt;a href="" title="Any title you want">All Projects&lt;/a>
+  &lt;/li> 
+  &lt;li>
+    &lt;a href="" title="Any title you want">Architecture&lt;/a> 
+  &lt;/li> 
+  &lt;li>
+    &lt;a href="" title="Any title you want">New Look&lt;/a> 
+  &lt;/li> 
+  &lt;li>
+    &lt;a href="" title="Any title you want">Photo View&lt;/a> 
+  &lt;/li> 
+&lt;/ul>
+
+&lt;!- Up here we've got a filter navigation. --->
+
+
+&lt;ul class="portfolio three-columns">
+
+  &lt;li data-id="id-1" class="new-look"> 
+    &lt;div class="item-image">
+    
+        &lt;a href="portfolio_item.html" class="over">
+            &lt;span>Work title&lt;/span>
+            &lt;p>Work description.&lt;/p>
+        &lt;/a>
+        
+        &lt;a href="portfolio_item.html">&lt;img src="img/pictures/2w.jpg" alt>&lt;/a>
+        
+    &lt;/div>
+  &lt;/li>
+  
+&lt;/ul></pre>
+        <p>Notice a lack of the '.detailed' class on the portfolio &lt;ul>&lt;/ul>.</p>
+        
+        <p>There are four portfolio columns layouts:</p>
+            <ol>
+            <li>One column - replace the 'three-columns' class with 'one-column'.</li>
+            <li>Owo columns - 'two-column'</li>
+            <li>Three columns - 'three-columns'</li>
+            <li>Four columns - 'four-columns'</li>
+            </ol>
+        
+        <p>Three different description styles:</p>
+        <ol>
+            <li>Description and title on image hover. This portfolio style is shown above.</li>
+            <li>Just a title under the image. Use this code:
+            <pre>&lt;li data-id="id-1" class="new-look"> 
+    &lt;div class="item-image">        
+        &lt;a href="portfolio_item.html">&lt;img src="img/pictures/2w.jpg" alt>&lt;/a>
+    &lt;/div>  
+     
+    &lt;div class="item-name">
+      &lt;h4 class="title">&lt;a href="img/pictures/1.jpg" rel="gallery[gallery1]" alt>Grand Central&lt;/a>&lt;/h4>
+    &lt;/div>    
+&lt;/li></pre>
+    		</li>
+            <li>A title with a description under the image - use this code.
+            <pre>&lt;li data-id="id-1" class="new-look"> 
+    &lt;div class="item-image">        
+        &lt;a href="portfolio_item.html">&lt;img src="img/pictures/2w.jpg" alt>&lt;/a>
+    &lt;/div>  
+     
+    &lt;div class="item-name">
+      &lt;h4 class="title">&lt;a href="img/pictures/1.jpg" rel="gallery[gallery1]">Grand Central&lt;/a>&lt;/h4>
+      &lt;p>This image directly opens a lightbox gallery. Donec sed tellus eget sapien fringilla nonummy.&lt;/p>
+      &lt;p>Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. &lt;/p>
+      &lt;a href="portfolio_item.html">Read more →&lt;/a>
+    &lt;/div>    
+&lt;/li></pre></li>
+            </ol>
+        <h4 id="template_contact">3.7. Contact</h4>
+        <p><strong>NOTE:</strong> Contact page is a custom content layout aswell so it uses the additional "custom_content" class on it's #main .inner div. Please refer <a href="#main">Here</a> for more information</p>
+        <p>Here is the structure:</p>
+<pre>&lt;div class="content">
+                  
+&lt;div class="form-success">
+    &lt;h2>Thank you, your message has been sent.&lt;/h2> &lt;!-- This is a success message that appears when a mail is sent -->
+&lt;/div>
+
+&lt;div class="contact-form">
+    &lt;form action="contact-form/send.php" method="post" class="big_form">   	
+        &lt;span>Name: *&lt;/span> 
+        &lt;input class="text" type="text" name="name"> 
+        
+        &lt;span>E-Mail: *&lt;/span> 
+        &lt;input class="text" type="text" name="email"> 
+        
+        &lt;span>Subject:&lt;/span> 
+        &lt;input class="text" type="text" name="subject"> 
+        
+        &lt;span>Message: *&lt;/span> 
+        &lt;textarea name="message" rows="8" cols="60">&lt;/textarea> 
+        
+        &lt;input id="submit" type="submit" class="button light_grey" value="Send"> 
+        &lt;div class="loading">&lt;/div>
+    &lt;/form> 
+&lt;/div>
+&lt;/div>&lt;!-- .content End -->
+&lt;!-- Content End -->
+
+
+&lt;!-- Sidebar Start -->
+&lt;div class="sidebar">
+&lt;div class="sidebar_item">
+    &lt;h5>Studio info&lt;/h5>
+    &lt;p>
+    Union Street 2b/345&lt;br>
+    London, WE, 39-1403
+    &lt;/p>
+&lt;/div>
+&lt;div class="sidebar_item">
+    &lt;h5>Contact info&lt;/h5>
+    &lt;p>
+    Phone: 519 439 122&lt;br>
+    Fax: 519 439 122&lt;br>
+    E-Mail: &lt;a href="contact@pure.com">contact@pure.com&lt;/a>
+    &lt;/p>
+&lt;/div>
+&lt;/div>&lt;!-- .sidebar End -->
+&lt;!-- Sidebar End -->
+
+&lt;div class="clear">&lt;/div>  
+
+</pre>
+      <p>As you can see, it's a simple right sidebar layout.</p> 
+      <p><strong>NOTE:</strong> To succesfuly run the contact script you need to have a server with PHP.<br>
+      <a href="#contact">Scroll down for more information about the Contact Page and it's configuration</a>.</p> 
+        
+        
+        
+        <hr>
+        
+		<h3 id="contact_page"><strong>4. Contact page configuration</strong> - <a href="#toc">top</a></h3>
+		
+        <p>The whole contact form is built with 3 files:
+        <ol>
+        	<li>/js/contact-form.js - this is an ajax script responsible for the 'first' form validation.</li>
+        	<li>/php/send.php - it's a core of the contact form responsible for composing and sending an e-mail.</li>
+            <li>/php/email-validator.php - a php script responsible for an advanced e-mail address validation.</li>
+        </ol>
+        
+        To change the e-mail address where messages will be send, open the send.php file and edit this line:
+        <pre>$to = '&lt;your@address.com>';</pre>
+        To change the message layout, find a part starting with this comment:
+        <pre>//Structure of the message:</pre>
+        And edit it as you wish.
+        </p>
+        <hr>
+        
+        <h3 id="cufon"><strong>5. Installing Cufon (Firefox 2.0+ compatibility)</strong> - <a href="#toc">top</a></h3>
+        <p>At first, I'd like to present you the cons and pros of using this method:</p>
+        Pros:
+        <ol>
+        	<li>Firefox 2.0+ compatibility</li>            
+            <li>Better rendering quality when it comes to more 'shapeful' fonts</li>
+        </ol>
+        Cons:
+        <ol>
+        	<li>Worse performance comparing to @font-face</li>
+            <li>Text cannot be selected</li>
+            <li>No 'smooth color transition on hover on links in modern browsers</li>
+        </ol>
+        <p>
+        I listed only arguments that may really interest you. You need to answer yourself if it is worth just for those 0,4% of all Firefox users (<a href="http://www.w3schools.com/browsers/browsers_firefox.asp">Firefox Stats</a>)?
+        </p>
+       
+        <p>Installation guide:</p>
+        <ol>
+        	<li>Add these three javascript to the bottom section (right where other javascripts are, just don't place them above the jquery one) on all your pages:
+            <pre>&lt;script type="text/javascript" src="js/cufon/cufon-yui.js">&lt;/script>     
+&lt;script type="text/javascript" src="js/cufon/cufon-config.js">&lt;/script> 
+&lt;script type="text/javascript" src="js/cufon/League_Gothic.font.js">&lt;/script></pre>
+			
+            <p>As you may see, the last file is responsible for the font itself. Learn more how to get more fonts with Cufon <a href="http://net.tutsplus.com/articles/news/the-easiest-way-to-use-any-font-you-wish/">Here</a> and just replace it with your own.</p>
+            </li>
+            
+            <li>You also need to edit some CSS to fix the Navigation hover color. Open the main stylesheet (/css/style.css) and completely remove this line from the Navigation section of the style.css:
+            <pre>.nav ul li:hover > a { color:#d16f4e; }</pre>            
+            </li>
+            
+            <li>Since Cufon doesn't support the 'smooth transition' you may want to remove it completely. Find this line:
+            <pre>a { color:#d16f4e; text-decoration:none; transition: color 0.1s linear; -moz-transition: color 0.1s linear; -webkit-transition: color 0.1s linear; -o-transition: color 0.1s linear; }</pre>
+            <p>And change it to this:</p>
+            <pre>a { color:#d16f4e; text-decoration:none; }</pre>
+            <p>It also appears on the .comments-nr .bold tag so find this line:</p>
+            <pre>.date .bold,.comments-nr .bold { font-size:28px; line-height:28px; display:block; color:#444; transition: color 0.1s linear; -moz-transition: color 0.1s linear; -webkit-transition: color 0.1s linear; -o-transition: color 0.1s linear; }</pre>
+            <p>And change it to this</p>
+            <pre>.date .bold,.comments-nr .bold { font-size:28px; line-height:28px; display:block; color:#444; }</pre>
+            </li>
+            <li>You will also need to edit the /js/custom.js file. Find these lines:
+            <pre>$list.quicksand($sorted_data, $preferences, function () {
+	over();
+	hover_opacity();
+	prettyPhoto();
+});
+            </pre>
+            <p>This script reloads the over and prettyPhoto function after the portfolio is sorted. Cufon will also need to be reloaded and to do that, simply add another callback "cufon();" above those three.
+            </p>
+            <p><strong>NOTE:</strong> Don't forget to remove it if you decide to not use Cufon on your site. If you do, the portfolio sorting script will not work properly.</p>
+            </li>
+            <li>Another con of using cufon is a hover color of the 'Cufon'ed' text. You cannot change it in CSS, you have to do it through the /js/cufon/cufon-config.js file. It is well commented so you shouldn't have any problems configuring it.
+            </li>
+            
+            
+            
+            
+        </ol>
+        <p>Now you can enjoy the Cufon on your website.</p>
+        
+        
+		<hr>
+        
+		<h3 id="simple_codes"><strong>6. Simple codes:</strong> - <a href="#toc">top</a></h3>
+        <p>All simple codes and their usage is described in a separate file: <a href="simple_codes.html">simple_codes.html</a>.</p>
+		<hr>
+
+		
+		
+		<h3 id="javascript"><strong>7. JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This theme imports eight Javascript files that are stored in /js folder.</p>
+		
+		<ol>
+			<li>jQuery - jquery-1.6.2.min.js</li>
+			<li>All front-end jQuery scripts - custom.js</li>
+			<li>jQuery UI Personalized - jquery-ui-personalized-1.5.2.packed.js</li>
+            <li>Quicksand - jquery.quicksand.min.js</li>
+            <li>jQuery easing - jquery.easing.js</li>
+            <li>PrettyPhoto - jquery.prettyPhoto.js</li>
+            <li>FlexSlider - jquery.flexslider.min.js</li>
+            <li>Contact form - contact-form.js</li>
+		</ol>
+		  
+		<ol>
+			<li>jQuery is a Javascript library that greatly reduces the amount of code that you must write.</li>
+			<li>Most of the animation in this site aswell as the slider and lightbox settings is carried out from the customs scripts.<br>
+            More about Slider <a href="#slider">Here</a>.<br>
+            More about Lightbox <a href="#lightbox">Here</a>.<br>
+            </li>
+			<li>jQuery UI provides abstractions for low-level interaction and animation, advanced effects and high-level, themeable widgets, built on top of the jQuery JavaScript Library, that you can use to build highly interactive web applications.
+			</li>
+            <li>Quicksand let's you reorder and filter items with a nice shuffling animation.
+			</li>
+            <li>jQuery easing is a jQuery plugin from GSGD to give advanced easing options.
+			</li>
+            <li>prettyPhoto is a jQuery lightbox clone. Not only does it support images, it also support for videos, flash, YouTube, iframes and ajax. It's a full blown media lightbox.
+			</li>
+            <li>FlexSlider is a jQuery Image Slider.
+            </li>
+            <li>Contact-form.js validates the contact form using Ajax language which means that no page reloading is needed.
+            </li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="psdFiles"><strong>8. PSD Files</strong> - <a href="#toc">top</a></h3>
+		
+		<p>Purity isn't a very complex layout as it uses very few image elements. But in case you prefer to work on PSD files I've included few with this theme:</p>
+		
+			<ul>
+                <li>Logo - logo.psd (font used: <a href="http://www.fontsquirrel.com/fonts/bebas-neue" target="_blank">Bebas Neue</a>)</li>
+                <li>Small footer logo - logo_footer.psd</li>
+                <li>Search icon - search.psd</li>
+                <li>A slide template - slide.psd</li>
+                <li>Image hover plus - over_plus.psd</li>
+                <li>The slider navigation arrows - arrows.psd</li>
+                <li>The slider navigation bullets - bullets.psd</li>                    
+                <li>Static Home Page heading image - static_image.psd</li>
+                <li>No-avatar image - avatar_unknown.psd</li>
+                <li>Toggle element (Plus and Minus) - toggle.psd</li>
+                <li>Buttons overlay background - button_over.psd</li>	
+                <li>Icons 32x32 - icons.psd</li>
+                <li>Icons 16x16 - icons-16x16</li>			
+			</ul>
+	
+		<hr>
+		
+		<h3 id="credits"><strong>9. Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the following images, icons or other files as listed.
+		
+		<ul>
+        	<li>Icons by Yummygum - <a href="http://www.iconsweets2.com/">http://www.iconsweets2.com/</a></li>
+        	<li>Background images by Webtreats - <a href="http://webtreats.mysitemyway.com/">http://webtreats.mysitemyway.com/</a></li>
+            <li>Wooden background images by Elemis - <a href="http://elemisfreebies.com/">http://elemisfreebies.com/</a></li>
+            <li>Carbon background pattern by Orman Clark - <a href="http://premiumpixels.com">http://premiumpixels.com</a></li>
+			<li>jQuery - <a href="http://jquery.com/">http://jquery.com/</a></li>
+			<li>jQuery UI - <a href="http://jqueryui.com/">http://jqueryui.com/</a></li>
+			<li>Quicksand by razorjack - <a href="http://jqueryui.com/">http://razorjack.net/quicksand/</a></li>
+			<li>jQuery easing by Robert Penners - <a href="http://gsgd.co.uk/sandbox/jquery/easing/">http://gsgd.co.uk/sandbox/jquery/easing/</a></li>
+            <li>prettyPhoto by Caron Stephane - <a href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/">http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/</a></li>
+            <li>FlexSlider by WooThemes - <a href="http://woothemes.com/">http://woothemes.com/</a></li>
+		</ul>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Tauris</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

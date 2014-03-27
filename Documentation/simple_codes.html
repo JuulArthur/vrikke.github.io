@@ -1,0 +1,387 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Purity HTML/CSS Template Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Purity&rdquo; Documentation by &ldquo;Tauris&rdquo; v1.1</h3>
+		
+		<hr>
+		
+		<h1 class="center">Purity HTML/CSS</h1>
+        <h2 class="center">Simple Codes</h2>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 7/07/2011<br>
+					By: Tauris<br>
+					Email: <a href="mailto:youremail@yourdomain.com">prafgon@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/Tauris">here</a>. If you like the theme, please take a moment to rate it on the ThemeForest website <a href="http://blog.themeforest.com/item/purity-clean-minimal-bold-website-template/408822">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Simple Codes</h2>
+		<ol>
+			<li><a href="#columns">Columns</a></li>
+			<li><a href="#typography">Typography</a>
+            	<ol class="sub">
+                	<li><a href="#headings">2.1. Headings</a></li>
+                    <li><a href="#pull_quotes">2.2. Pull quotes</a></li>
+                    <li><a href="#images_styling">2.3. Images styling</a></li>
+                    <li><a href="#centered_images">2.4. Centered images</a></li>
+                    <li><a href="#images_caption">2.5. Images with captions</a></li>
+                    <li><a href="#highlighting">2.6. Text highlighting</a></li>
+                    <li><a href="#dropcaps">2.7. Drop caps</a></li>
+                    <li><a href="#blockquotes">2.8. Block Quotes</a></li>
+                </ol>
+            </li>	
+			<li><a href="#elements">Elements</a>
+            	<ol class="sub">
+                	<li><a href="#icon_boxes">3.1. Icon boxes</a></li>
+                	<li><a href="#buttons">3.2. Buttons</a></li>
+                    <li><a href="#big_buttons">3.3. Big buttons</a></li>
+                    <li><a href="#tabs">3.4. Tabs</a></li>
+                    <li><a href="#toggles">3.5. Toggles</a></li>
+                    <li><a href="#lists">3.6. Lists</a></li>
+                    <li><a href="#content_boxes">3.7. Content boxes</a></li>
+                    <li><a href="#dividers">3.8. Dividers</a></li>                    
+                </ol>
+            </li>
+		</ol>
+        <a href="index.html">Go to the main documentation file →</a><br><br>
+		
+		<hr>
+		
+		<h3 id="columns"><strong>1. Columns</strong> - <a href="#toc">top</a></h3>
+		<p>Columns are the most fundamental element of your layouts. They are fully width-adjustable so you can use them on full-width pages aswell as on the sidebar layout content and even on the sidebar. You may also place them inside tabs, toggles and box contents. The list is just endless.
+        </p>
+        <p>They are also very easy to use. Here is a basic example:</p>
+		<pre>&lt;div class="one_fourth">
+	&lt;!-- One fourth column content -->  
+&lt;/div>
+
+&lt;div class="three_fourth last"> 
+	&lt;!-- Three fourth column content -->  
+&lt;/div>
+
+&lt;div class="clear">&lt;/div>
+</pre>
+		<p><strong>NOTE 1:</strong> Never forget to use an additional class "last" on the last column in the row. If you do, it will break whole page layout.</p>
+        
+		<p><strong>NOTE 2:</strong> Never forget to use a div ".clear" after a row of columns. If you do, it will break the whole page layout. You may also use dividers - read more about them <a href="#dividers">Here</a>.</p>
+        
+        <p>Here is a full list of columns you may use:</p>
+        <ol>
+        	<li>one_half</li>
+            <li>one_third</li>
+            <li>two_third</li>
+            <li>one_fourth</li>
+            <li>three_fourth</li>
+            <li>one_fifth</li>
+            <li>two_fifth</li>
+            <li>three_fifth</li>
+        </ol>
+        <p>For a better look, I included a file columns.html (located in /www/ folder) where you can see all columns in action.</p>
+		<hr>
+		
+        <h3 id="columns"><strong>2. Typography</strong> - <a href="#toc">top</a></h3>
+        
+        <p>You may check all the typography simple codes in action in a "typography.html" file located in your /www/ folder.</p>
+        <hr>
+        
+        <h4 id="headings">2.1. Headings - <a href="#toc">top</a></h4>
+        <p>For your use, I prepared six different headings. Here is a basic example of an usage:</p>
+        <pre><span class="highlight">&lt;h1>Heading &lt;/h1></span>
+&lt;p>Some text content&lt;/p></pre>
+        <p>Here is a full list of headings: h1, h2, h3, h4, h5, h6.</p>
+        <hr>
+        
+        <h4 id="pull_quotes">2.2. Pull quotes - <a href="#toc">top</a></h4>
+        <p>Place them inside paragraphs:</p>
+        <pre>&lt;p>
+        
+..some text content here..
+
+<span class="highlight">&lt;span class="pullright">Right pull quote text content&lt;/span></span>
+
+..some text content here..
+
+<span class="highlight">&lt;span class="pullleft">Left pull quote text content&lt;/span></span>
+
+..some text content here..
+
+&lt;/p>
+        </pre>
+        <hr>
+        
+        <h4 id="images_styling">2.3. Images styling - <a href="#toc">top</a></h4>
+        <p>Place them inside or outside paragraphs:</p>
+        <pre>&lt;p>
+        
+..some text content here..
+
+<span class="highlight">&lt;img src="img/your_image.jpg" class="imageright" alt></span>
+
+..some text content here..
+
+<span class="highlight">&lt;img src="img/your_image.jpg" class="imageleft" alt></span>
+
+..some text content here..
+
+&lt;/p>
+        </pre>
+        <hr>
+        
+        <h4 id="centered_images">2.4. Centered images - <a href="#toc">top</a></h4>
+        <p>Place them outside paragraphs. This is a standard centered image without a border:</p>
+        <pre>&lt;img src="img/your_image.jpg" <span class="highlight">class="center"</span> alt></pre>
+		<p>And here is a code for a centered image with a border</p>
+		<pre>&lt;img src="img/your_image.jpg" <span class="highlight">class="center border"</span> alt></pre>
+        <p><strong>NOTE:</strong> Since default images without a class don't have a border, you may use the class ".border" on anywhere you want.</p>
+        <hr>
+        
+        <h4 id="images_caption">2.5. Images with caption - <a href="#toc">top</a></h4>
+        <p>Place them inside or outside paragraphs:</p>
+        <pre>&lt;p>
+        
+..some text content here..
+
+<span class="highlight">&lt;div class="blockright">
+    &lt;img src="img/your_image.jpg" alt>
+    &lt;p class="caption">This is a caption&lt;/p>
+&lt;/div></span>
+
+..some text content here..
+
+<span class="highlight">&lt;div class="blockleft">
+    &lt;img src="img/your_image.jpg" alt>
+    &lt;p class="caption">This is a caption&lt;/p>
+&lt;/div></span>
+
+..some text content here..
+
+&lt;/p>
+        </pre>
+        
+        <hr>
+        
+        <h4 id="highlighting">2.6. Text highlighting - <a href="#toc">top</a></h4>
+        <p>Here is an usage example:</p>
+        <pre>&lt;p>
+        
+<span class="highlight">&lt;span class="highlight-light">This is a light highlighted text.&lt;/span></span> Here is some not highlighted text. Here is some not highlighted text. Here is some not highlighted text here text  here. <span class="highlight">&lt;span class="highlight-dark">This is a dark highlighted text.&lt;/span></span> Here is some not highlighted text. Here is some not highlighted text. Here is some not highlighted text. 
+
+&lt;/p></pre>
+        <hr>
+        
+        <h4 id="#dropcaps">2.7. Drop caps - <a href="#toc">top</a></h4>
+        <p>Place them inside or outside (for example if it's a number) a paragraph:</p>
+        <pre>&lt;p>
+	<span class="highlight">&lt;span class="dropcap1">Q&lt;/span></span>uisque aliquam donec faucibus. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. 
+&lt;/p>
+&lt;p>
+	<span class="highlight">&lt;span class="dropcap2">L&lt;/span></span>uisque aliquam donec faucibus. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. 
+&lt;/p></pre>
+        <hr>
+        
+        <h4 id="blockquotes">2.8. Block quotes  - <a href="#toc">top</a></h4>
+        <p>A block quote element automatially adjusts it's width to the column. I suggest you to place them inside a paragraph.</p>
+        <p>A standard one:</p>
+        <pre>&lt;blockquote>
+    &lt;p>
+    This is a blockquote text content.
+    &lt;/p>
+&lt;/blockquote></pre>
+		<p>A block quote with a quote author:</p>
+        <pre>&lt;blockquote>
+    &lt;p>
+    This is a blockquote text content.
+    &lt;/p>
+    &lt;span>Quote author&lt;/span>
+&lt;/blockquote></pre>
+        
+        <hr>
+        
+        <h3 id="elements"><strong>3. Elements</strong> - <a href="#toc">top</a></h3>
+        <p>You may check all elements simple codes in action in a "elements.html" file located in your /www/ folder.</p>
+        <hr>
+        
+        <h4 id="icon_boxes">3.1. Icon boxes - <a href="#toc">top</a></h4>
+        <p>Icon boxes are closely related with columns. They MUST be placed in one of these three: One Third, One Fourth or One Fifth. Here is a basic structure of a One Fourth icon box:</p>
+        <pre>&lt;div class="one_fourth"> 
+    &lt;div class="icon-image">
+        &lt;img src="img/icons/eye.png" alt>
+    &lt;/div>
+    &lt;div class="icon-text">
+        &lt;h5>Icon box Title&lt;/h5>
+        &lt;p>Icon box description.&lt;/p>
+    &lt;/div>
+&lt;/div></pre>
+		<p>To create a One Fifth icon box, simply replace the "one_fourth" class with "one_fifth".</p>
+        <p><strong>NOTE:</strong>As with the columns, never forget to use additional class "last" on the latest icon box in a row. You may not forget about a divider after every row of icon boxes or it will break the whole page layout. Please refer to <a href="#columns">Columns</a> to learn more.</p>
+        <p>Template comes with 36 icons. Want more? <a href="http://iconsweets2.com/">Get over 400 here!</a>
+        <hr>
+        
+        <h4 id="buttons">3.2. Buttons - <a href="#toc">top</a></h4>
+        <p>Here is a code:</p>
+        <pre>&lt;a href="http://somepage.com" class="button <span class="highlight">light_grey</span>">This is a light grey button&lt;/a></pre>
+        <p>Available colors:</p>
+            <ol>
+            	<li>light_grey</li>
+                <li>grey</li>
+                <li>dark</li>
+                <li>blue</li>
+                <li>light_blue</li>
+                <li>green</li>
+                <li>light_green</li>
+                <li>purple</li>
+                <li>red</li>
+                <li>yellow</li>
+                <li>brown</li>
+            </ol>
+        <hr>
+        
+        <h4 id="big_buttons">3.3. Big buttons - <a href="#toc">top</a></h4>
+        <p>The only thing that differs from the standard size buttons is the "button" class being replaced by "big_button". Example:</p>
+        <pre>&lt;a href="http://somepage.com" class="<span class="highlight">big_button</span> red">This is a big red button&lt;/a></pre>        
+        <hr>
+        
+        
+        <h4 id="tabs">3.4. Tabs - <a href="#toc">top</a></h4>
+        <p>Tabs automatically adjusts their width to a column. They have a bit more complicated structure. Here is the code:</p>
+        <pre>&lt;div class="tabs">
+
+    &lt;ul class="tabnav">
+        &lt;li>&lt;a href="<span class="highlight">#tab_1</span>">Tab 1&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#tab_2">Tab 2&lt;/a>&lt;/li>
+        &lt;li>&lt;a href="#tab_3">Tab 3&lt;/a>&lt;/li>
+    &lt;/ul>
+    
+    &lt;div id="<span class="highlight">tab_1</span>" class="tabdiv">
+        &lt;p>
+        Tab 1 content.
+        &lt;/p> 
+    &lt;/div>
+    
+    &lt;div id="tab_2" class="tabdiv">
+        &lt;p>Tab 2 content.&lt;/p>
+    &lt;/div>
+    
+    &lt;div id="tab_3" class="tabdiv">
+        &lt;p>
+        Tab 3 content. 
+        &lt;/p>
+    &lt;/div>
+    
+&lt;/div></pre>
+		<p>The most important thing is to give a tab navigation element the same href as an id of a tabdiv element where the tab content is.</p>
+          <hr>
+        
+        <h4 id="toggles">3.5. Toggles - <a href="#toc">top</a></h4>
+        <p>Toggles automatically adjusts their width to a column aswell. They are a bit less complex then tabs:</p>
+        <pre>&lt;ul class="toggle-view">
+        
+    &lt;li>
+        &lt;h6 class="toggle">Do toggles automatically adjust their width?&lt;/h6>
+        &lt;p>Yes, this element automatically adjusts its width to the column!&lt;/p>
+    &lt;/li>
+    
+    &lt;li>
+        &lt;h6 class="toggle">Toggle 2&lt;/h6>                            
+        &lt;p>Toggle 2 content&lt;/p>
+        
+    &lt;/li>
+    
+    &lt;li>
+        &lt;h6 class="toggle">Toggle 3&lt;/h6>                            
+        &lt;p>Toggle 3 content.&lt;/p>
+    &lt;/li>
+    
+&lt;/ul></pre>
+        <hr>
+        
+        <h4 id="lists">3.6. Lists - <a href="#toc">top</a></h4>
+        <p>There are two different list types: an unordered list (&lt;ul>&lt;/ul>) and an ordered list (&lt;ol>&lt;/ol>).</p>
+        <p>Here is an usage example of the first type, unordered list with a checklist icon:</p>
+        <pre>&lt;ul class="list <span class="highlight">check</span>">
+    &lt;li>List element 1&lt;/li>
+    &lt;li>List element 2&lt;/li>
+    &lt;li>List element 3&lt;/li>
+    &lt;li>List element 4&lt;/li>
+    &lt;li>List element 5&lt;/li>
+&lt;/ul></pre>
+		<p>There are two other styles of the unordered list: a circle list (replace the 'check' class with 'circle') and a square list (replace it with 'square').</p>
+        
+        <p>Here is an usage example of the second list type, ordered list:</p>
+        <pre>&lt;ol>
+    &lt;li>List element 1&lt;/li>
+    &lt;li>List element 2&lt;/li>
+    &lt;li>List element 3&lt;/li>
+    &lt;li>List element 4&lt;/li>
+    &lt;li>List element 5&lt;/li>
+&lt;/ol></pre>
+		<p></p>
+        <hr>
+        
+        
+        
+        <h4 id="content_boxes">3.7. Content boxes - <a href="#toc">top</a></h4>
+        <p>Content box automatically adjusts it's width to a column. Here is an usage example:</p>
+        <pre>&lt;div class="box box-grey">
+    This is a grey content box.
+&lt;/div></pre>
+		<p>To make your own color version, open up your custom.css file (located in /www/css/ folder) and add a rule there. For example, let's say that you want to make a red content box. Name it "box-red" and place this code in your custom.css file:</p>
+        <pre>.box-red { 
+  border-color:red; 
+  color:red; 
+}</pre>
+		<p>To use a newly created box style, change the "box-grey" class I showed on the example above with your new class "box-red".</p>
+        <hr>
+        
+        <h4 id="dividers">3.8. Dividers - <a href="#toc">top</a></h4>
+        <p>Dividers automatically adjust their width to a column (which matters if you use a line or a top divider). Dividers are used to divide content areas within a web page.</p>
+        <p>A simple divider, just 'space':</p>
+		<pre>&lt;div class="divider">&lt;/div></pre>
+        
+        <p>A line divider:</p>
+		<pre>&lt;div class="divider line">&lt;/div></pre>
+        
+        <p>A line divider with the 'Top' linke:</p>
+		<pre>&lt;div class="divider top">&lt;a href="#">Top&lt;/a>&lt;/div></pre>
+        <hr>
+        
+		<p class="append-bottom alt large"><strong>Tauris</strong></p>
+		<p><a href="#toc">Go To Top</a></p>
+		
+        
+        <p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+        <hr>
+        
+        
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
