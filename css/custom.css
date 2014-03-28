@@ -1,6 +1,9 @@
-/* 
+/*
 /
 / This is a place for your custom styling.
 /
 */
+.nav { float:left; height:30px; margin:40px 0; position: relative; top: 60px}
+#slider { max-height:900px; float: right;}
 
+.home_intro p { float: left; text-align:left; font-size:20px; line-height: 120%;}
