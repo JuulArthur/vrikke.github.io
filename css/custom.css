@@ -7,3 +7,4 @@
 #slider { max-height:900px; float: right;}
 
 .home_intro p { float: left; text-align:left; font-size:20px; line-height: 120%;}
+.about_image {postition: absolute; margin-left: auto; margin-right: auto}

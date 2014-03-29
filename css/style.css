@@ -89,7 +89,7 @@ img { max-width: 100%; display: block; height: auto; }
 .three_fifth { width:58.4%; }
 .four_fifth { width:79.2%; }
 
-.last { margin-right: 0 !important; clear: right; }
+.last { margin-right: 0 !important; clear: right;  }
 
 .full-width { width:100%; }
 
@@ -184,7 +184,7 @@ blockquote { color:#aaa; font-size:15px; font-style:italic;  margin:20px 0px 20p
 /*===  5.1. Navigation ===*/
 /*========================*/
 
-.nav { float:right; height:30px; }
+.nav { float:right; height:30px; margin:40px 0; }
 .nav ul { list-style:none; position:relative; }
 	.nav ul li { float:left; margin-left:20px; position:relative; display:block; font-size:22px; }
 	.nav ul li > a { color:#666; padding:0px 8px; line-height:40px; text-decoration:none; display:block;  }
