@@ -3,8 +3,10 @@
 / This is a place for your custom styling.
 /
 */
-.nav { float:left; height:30px; margin:40px 0; position: relative; top: 60px}
+@media (min-width:960px){.nav { float:left; height:30px; margin:40px 0; position: relative; top: 60px}}
 #slider { max-height:900px; float: right;}
 
 .home_intro p { float: left; text-align:left; font-size:20px; line-height: 120%;}
 .about_image {postition: absolute; margin-left: auto; margin-right: auto}
+.fancybox-custom .fancybox-skin {box-shadow: 0 0 50px #222;}
+.fanceyimg {height: 200px;display: inlin;}
